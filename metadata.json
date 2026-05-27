@@ -1,0 +1,6 @@
+{
+  "name": "Kit Torcedor Brasil",
+  "description": "Página de vendas interativa e de alta conversão para o Kit Torcedor Brasil com 12 itens, incluindo checkout simulado, cronômetro e depoimentos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
