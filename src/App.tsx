@@ -102,7 +102,7 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState<'all' | 'vestuario' | 'festa' | 'barulho' | 'decoracao'>('all');
   const [selectedItem, setSelectedItem] = useState<TorcedorItem | null>(null);
   const [activeMedia, setActiveMedia] = useState<'video' | 'real' | 'box'>('video');
-  const [videoPlaying, setVideoPlaying] = useState(true);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   
@@ -536,10 +536,10 @@ export default function App() {
                     <video
                       ref={videoRef}
                       src="https://assets.mixkit.co/videos/preview/mixkit-soccer-ball-sitting-on-the-grass-before-a-match-40348-large.mp4"
-                      className="w-full h-full object-cover cursor-pointer"
+                      poster={realLayoutImage}
+                      className="w-full h-full object-cover cursor-pointer animate-fade-in"
                       playsInline
                       loop
-                      autoPlay
                       muted
                       referrerPolicy="no-referrer"
                       onClick={() => setVideoPlaying(!videoPlaying)}
@@ -547,14 +547,24 @@ export default function App() {
                       onPause={() => setVideoPlaying(false)}
                     />
                     
-                    {/* Play/Pause Button overlay */}
+                    {/* Play/Pause Button cover image overlay */}
                     {!videoPlaying && (
-                      <button
+                      <div 
                         onClick={() => setVideoPlaying(true)}
-                        className="absolute inset-0 m-auto flex items-center justify-center w-16 h-16 rounded-full bg-brand-yellow hover:bg-brand-yellow-dark text-slate-900 shadow-xl transition-transform hover:scale-110 active:scale-95 z-10 cursor-pointer"
+                        className="absolute inset-0 w-full h-full cursor-pointer flex items-center justify-center z-10 transition-all hover:scale-[1.01]"
                       >
-                        <Play className="w-8 h-8 fill-slate-900 ml-1" />
-                      </button>
+                        <img 
+                          src={realLayoutImage} 
+                          alt="Capa do Vídeo" 
+                          className="absolute inset-0 w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
+                        <div className="absolute inset-0 bg-black/25" />
+                        
+                        <div className="relative flex items-center justify-center w-16 h-16 rounded-full bg-brand-yellow hover:bg-brand-yellow-dark text-slate-900 shadow-xl transition-transform hover:scale-110 active:scale-95 z-20">
+                          <Play className="w-8 h-8 fill-slate-900 ml-1" />
+                        </div>
+                      </div>
                     )}
 
                     {/* Mute controller for VSL conversion */}
