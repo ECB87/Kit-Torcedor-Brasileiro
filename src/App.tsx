@@ -368,7 +368,7 @@ export default function App() {
           
           <a 
             id="header-cta"
-            href="https://entrega.logzz.com.br/pay/memgnzpp7/vaibrasil"
+            href="https://entrega.logzz.com.br/pay/memgnzpp7/logzz-vaibrasil"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-brand-green hover:bg-brand-green-dark text-white font-bold text-xs md:text-sm px-4 py-2 rounded-xl transition-all shadow-md active:scale-95 flex items-center gap-1 cursor-pointer"
@@ -464,7 +464,7 @@ export default function App() {
             {/* Direct Action */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a 
-                href="https://entrega.logzz.com.br/pay/memgnzpp7/vaibrasil"
+                href="https://entrega.logzz.com.br/pay/memgnzpp7/logzz-vaibrasil"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-yellow hover:bg-brand-yellow-dark text-slate-900 font-extrabold text-base md:text-lg px-8 py-4 rounded-2xl transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-brand-yellow/20 flex items-center justify-center gap-2 cursor-pointer group"
@@ -541,6 +541,7 @@ export default function App() {
                       loop
                       autoPlay
                       muted
+                      referrerPolicy="no-referrer"
                       onClick={() => setVideoPlaying(!videoPlaying)}
                       onPlay={() => setVideoPlaying(true)}
                       onPause={() => setVideoPlaying(false)}
@@ -872,7 +873,7 @@ export default function App() {
 
                   {/* Standard CTA to Checkout */}
                   <a 
-                    href="https://entrega.logzz.com.br/pay/memgnzpp7/vaibrasil"
+                    href="https://entrega.logzz.com.br/pay/memgnzpp7/logzz-vaibrasil"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full bg-brand-yellow hover:bg-brand-yellow-dark text-slate-900 font-extrabold text-xs py-3.5 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-1 cursor-pointer text-center"
@@ -953,7 +954,7 @@ export default function App() {
             </div>
             
             <a 
-              href="https://entrega.logzz.com.br/pay/memgnzpp7/vaibrasil"
+              href="https://entrega.logzz.com.br/pay/memgnzpp7/logzz-vaibrasil"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-yellow hover:bg-brand-yellow-dark text-slate-900 font-extrabold text-xs md:text-sm px-6 py-3.5 rounded-xl transition-all shadow-md active:scale-95 cursor-pointer relative z-10 uppercase tracking-wider text-center"
@@ -1121,13 +1122,13 @@ export default function App() {
               {/* Huge Checkout CTA Trigger to Logzz */}
               <div className="pt-6 space-y-3">
                 <a 
-                  href="https://entrega.logzz.com.br/pay/memgnzpp7/vaibrasil"
+                  href="https://entrega.logzz.com.br/pay/memgnzpp7/logzz-vaibrasil"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-brand-green hover:bg-brand-green-dark text-white font-extrabold text-center text-sm md:text-base py-4.5 px-6 rounded-2xl transition-all shadow-xl hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 border border-brand-yellow/30 cursor-pointer shadow-brand-green/20 uppercase tracking-wider"
                 >
                   <ShoppingBag className="w-5 h-5 shrink-0 text-brand-yellow animate-bounce" />
-                  <span>Garanta Seu Kit No Checkout Seguro</span>
+                  <span>Quero meu kit pagamento só na entrega</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
 
