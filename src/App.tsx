@@ -48,8 +48,8 @@ import {
   Review,
   Faq
 } from './types';
-const boxImage = '/src/assets/images/kit_torcedor_box_items_white_bg_1779912635573.png';
-const realLayoutImage = '/src/assets/images/kit_torcedor_real_layout_1779908500122.png';
+import boxImage from './assets/images/kit_torcedor_box_items_white_bg_1779912635573.png';
+import realLayoutImage from './assets/images/kit_torcedor_real_layout_1779908500122.png';
 
 // Icon mapping dictionary
 const IconMap: Record<string, React.ComponentType<{ className?: string }>> = {
